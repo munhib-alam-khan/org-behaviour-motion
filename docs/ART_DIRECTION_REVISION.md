@@ -438,6 +438,8 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 | A06 | `A06_cashier-scanning.webp` | **A04 alternate shot** (same character at work) → Sc 2 (repeated frames under AGAIN), Sc 7 right frame (scanning = task identity) | 1536×1024 | Approved, continuity shot |
 | A07 | `A07_P07_overhead-bag-rail.webp` | **P07 (adapted)**: overhead bag rail, not a top-down belt → Sc 5, Sc 13 | 1536×1024 | Approved, adaptation noted |
 | A08 | `A08_P09_cash-drawer.webp` | **P09** cash drawer → Sc 7 left frame (significance: money handled), Sc 21 right pan | 1536×1024 | Approved, **screen amount must be covered** |
+| A09 | `A09_P10_stamp-hand.webp` | **P10** stamp → Sc 6 (stamp lands on the assumption), Sc 16 (PROPOSED: stamp in the cashier's hand) | 1536×1024 | Approved |
+| A10 | `A10_P14-P15_cashier-supervisor-aisle.webp` | **P14 + P15 + P13** → Sc 18 (developmental conversation), Sc 16 (supervisor), Sc 15 (price-verification in the aisle) | 1536×1024 | Approved, **badge text to cover** |
 
 **A04 lock:** A04 is the only cashier character. It is used for every P05 reference: Sc 3 (WE ASKED THE CASHIERS), Sc 8 (2.55 squeeze), Sc 9 (Meaningful. But narrow.), Sc 14 (redesign opening), Sc 15 anchor, Sc 17 small climber, Sc 21 left pan, Sc 23 finale. No other cashier will be generated or substituted.
 
@@ -452,3 +454,7 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 - **A06:** treated as A04 at work, not a new protagonist. Wherever character identity carries meaning (Sc 3, 8, 9, 14, 15, 17, 21, 23), A04 is used. A06 is used only where the action matters more than the face (repetition, scanning). Its face is kept smaller or partly cropped so minor differences from A04 don't read.
 - **A07 adaptation:** the shot is an overhead rail with numbered hanging bags (12/14/16). For Sc 5, the **five JCM objects hang from the rail hooks** and travel in on it, so the bag numbers are replaced with our 01–05 labels. Sc 13 uses the same rail ("objects suspended above the store") with scanner-light beams dropping to the three states. AI artefact: almost every lane sign reads "5", so those are retouched or kept out of crop.
 - **A05:** AI-generated, fictional faces, acceptable. The cashier at the right edge is cropped out so no second protagonist appears.
+
+**Handling rules (batch 3):**
+- **A09:** the hand wears the cashier's sleeve, so it fits Sc 6 and the Sc 16 *proposed* state (the decision is in the cashier's hand). For the Sc 16 *old* state (supervisor approval), the stamp is shown as a cropped macro, with the impression filling the frame and no sleeve visible, so it doesn't contradict the story. The stamped paper's generated text is covered.
+- **A10:** the cashier reads as A04 (consistent). The supervisor is adopted as the **one recurring supervisor**. The ID badge's generated text/logo is blurred. Aisle signs are generic category names (no branding) and are kept or cropped as needed. The shot covers three planned shots: aisle (P13), conversation (P14) and supervisor (P15).
