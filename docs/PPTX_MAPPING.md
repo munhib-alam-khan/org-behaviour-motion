@@ -1,6 +1,6 @@
 # PPTX Submission Version: HTML → PowerPoint Mapping
 
-**Status: proposal, awaiting approval. Nothing generated yet. The HTML is not touched.**
+**Status: APPROVED and built.** Final deck: 43 slides (42 main + appendix); see `submission/CONVERSION_REPORT.md` §2 for the two documented changes.
 
 - **Output:** `submission/OB_Midterm_JCM_Imtiaz_Final.pptx` (16:9, 13.333 × 7.5 in), plus a PDF preview, per-slide PNGs and a conversion report.
 - **Build method:** a reproducible script (`scripts/build-pptx.py`, python-pptx) that reads the same locked values (`src/data/research.ts`, `src/data/respondents.ts`) and the same prepared images (`src/assets/img/`) as the HTML. No HTML-to-PPT converter and no full-slide screenshots.
