@@ -423,3 +423,20 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 | P21 | Macro of a **card terminal / POS screen** with a generic "APPROVED" state, no brand | Sc 18 |
 | P22 | **Plastic grocery crates / cardboard boxes**, several angles (CUT) | Sc 17 |
 | P23 | **Varied small moments** for the Sc 4 contact sheet: hands, coins, bags, belt, drawer, queue, scanner, shelves (8–15 images; can reuse others) | Sc 4 |
+
+---
+
+## 8. Asset mapping (ingest log)
+
+| Asset | File (`assets/raw/`) | Shot | Size | Status |
+|---|---|---|---|---|
+| A01 | `A01_P01_scanner-hands.webp` | **P01** scanner-hands close-up | 1672×941 | Approved |
+| A03 | `A03_P04_checkout-lanes.webp` | **P04** wide checkout lanes | 1672×941 | Approved |
+| A04 | `A04_P05_cashier-character.webp` | **P05** 🔒 **locked recurring cashier character** | 1536×1024 | Approved |
+
+**A04 lock:** A04 is the only cashier character. It is used for every P05 reference: Sc 3 (WE ASKED THE CASHIERS), Sc 8 (2.55 squeeze), Sc 9 (Meaningful. But narrow.), Sc 14 (redesign opening), Sc 15 anchor, Sc 17 small climber, Sc 21 left pan, Sc 23 finale. No other cashier will be generated or substituted.
+
+**Technical notes:**
+- Local cutout of A04 was tested with rembg/isnet, fully offline after the one-time model download. Clean result, including hair. The reaching hand dissolves into the scanner, and the body ends at the counter line.
+- A01 and A03 are below 1920 px wide, so full-bleed use needs a ~1.15× upscale. A04 needs ~1.25× when cropped to 16:9.
+- A03 has AI artefacts: lane signs "4" and "5" are duplicated in the background.
