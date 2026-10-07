@@ -440,6 +440,11 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 | A08 | `A08_P09_cash-drawer.webp` | **P09** cash drawer → Sc 7 left frame (significance: money handled), Sc 21 right pan | 1536×1024 | Approved, **screen amount must be covered** |
 | A09 | `A09_P10_stamp-hand.webp` | **P10** stamp → Sc 6 (stamp lands on the assumption), Sc 16 (PROPOSED: stamp in the cashier's hand) | 1536×1024 | Approved |
 | A10 | `A10_P14-P15_cashier-supervisor-aisle.webp` | **P14 + P15 + P13** → Sc 18 (developmental conversation), Sc 16 (supervisor), Sc 15 (price-verification in the aisle) | 1536×1024 | Approved, **badge text to cover** |
+| A11 | `A11_P08-SV_basket.webp` | **P08 · Skill Variety** (mixed basket) → Sc 5, Sc 13 | 1672×941 | Approved, cutout tested clean |
+| A12 | `A12_P08-TI_receipt-roll.webp` | **P08 · Task Identity** (receipt roll) → Sc 5, Sc 13. Its blank paper also serves as the **P03 receipt texture** | 1672×941 | Approved, cutout tested clean |
+| A13 | `A13_P08-TS_bag.webp` | **P08 · Task Significance** (customer's bag) → Sc 5, Sc 13 | 1672×941 | Approved, cutout tested clean |
+| A14 | `A14_P08-AU_keys.webp` | **P08 · Autonomy** (keys) → Sc 5, Sc 13 | 1672×941 | Approved, **house charm to be removed** |
+| A15 | `A15_P08-FB_scanner.webp` | **P08 · Feedback** (scanner) → Sc 5, Sc 13 | 1672×941 | Approved, cutout tested clean |
 
 **A04 lock:** A04 is the only cashier character. It is used for every P05 reference: Sc 3 (WE ASKED THE CASHIERS), Sc 8 (2.55 squeeze), Sc 9 (Meaningful. But narrow.), Sc 14 (redesign opening), Sc 15 anchor, Sc 17 small climber, Sc 21 left pan, Sc 23 finale. No other cashier will be generated or substituted.
 
@@ -458,3 +463,8 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 **Handling rules (batch 3):**
 - **A09:** the hand wears the cashier's sleeve, so it fits Sc 6 and the Sc 16 *proposed* state (the decision is in the cashier's hand). For the Sc 16 *old* state (supervisor approval), the stamp is shown as a cropped macro, with the impression filling the frame and no sleeve visible, so it doesn't contradict the story. The stamped paper's generated text is covered.
 - **A10:** the cashier reads as A04 (consistent). The supervisor is adopted as the **one recurring supervisor**. The ID badge's generated text/logo is blurred. Aisle signs are generic category names (no branding) and are kept or cropped as needed. The shot covers three planned shots: aisle (P13), conversation (P14) and supervisor (P15).
+
+**Handling rules (batch 4, P08 set):**
+- All five were cut out locally (rembg/isnet, offline) with clean results. The wire basket's gaps come out transparent and the scanner cable trails off one edge.
+- **A14:** the house-shaped charm reads as "home ownership" rather than autonomy, so it is masked out of the cutout locally. The plain keys and car fob stay.
+- **A12:** a blank roll with no generated text, so it doubles as the paper source for our own typeset receipts. **P03 is downgraded from critical to optional.**
