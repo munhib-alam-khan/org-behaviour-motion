@@ -1,6 +1,6 @@
 # Art-Direction Revision Plan: "CHECKOUT" v2
 
-**Status: APPROVED IN PRINCIPLE.** Next step: map the supplied asset pack to P01–P20 and get that mapping approved. No implementation before then. See §7 for amendments.
+**Status: IMPLEMENTED (v2).** Mapping approved; Sc 20 uses the clipboard (A20). See §7–9.
 Scope is visual only. Research, narrative, scene order, click-states, presenter controls, data and engine stay exactly as they are (24 scenes, 93 states). Every locked number keeps its current scene and click.
 
 ---

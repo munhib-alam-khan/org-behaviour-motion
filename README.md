@@ -48,6 +48,19 @@ An academic study. Not affiliated with or endorsed by Imtiaz. The redesign and p
 
 The full creative direction and scene map are in [`docs/PRESENTATION_PLAN.md`](docs/PRESENTATION_PLAN.md).
 
+## Imagery
+
+All photography is **AI-generated and illustrative**: no real employees, respondents or Imtiaz branding. The deck says so on the title and closing frames.
+
+- Source files live in `assets/raw/` (A01–A20, mapped in [`docs/ART_DIRECTION_REVISION.md`](docs/ART_DIRECTION_REVISION.md)).
+- `python3 scripts/prepare-assets.py` builds everything in `src/assets/img/` locally:
+  - grades, duotones and 16:9 crops
+  - **offline background removal** (rembg) with sticker borders baked in
+  - the 25 collage crops
+  - blurring of any AI-generated receipt text, POS totals or badge text, so no generated figure is ever legible
+- A04 is the one recurring cashier character. A10's supervisor is the one recurring supervisor.
+- Requires `pip install rembg onnxruntime pillow numpy`. Only needed when the raw assets change, because the outputs are committed.
+
 ## Data integrity
 
 - Every number on screen comes from [`src/data/research.ts`](src/data/research.ts).
@@ -69,4 +82,4 @@ npm run release   # build + copy to index.html (GitHub Pages) and release/CHECKO
 - Each scene is a paused GSAP timeline. Every `step()` call marks a click-state label, so forward plays to the next label and back/jump seeks. Scene modules live in `src/scenes/act*.ts`.
 - **GitHub Pages** (*Settings → Pages → Deploy from a branch*, folder `/ (root)`) serves the root `index.html`, which is the **built** presentation. The dev source entry is `src/index.html`. **Always run `npm run release` and commit before pushing**, or Pages will show the old build. Local offline use never depends on Pages.
 
-Fonts: Archivo and JetBrains Mono (SIL Open Font License), bundled. Animation: GSAP 3 (bundled).
+Fonts: Archivo and JetBrains Mono (SIL Open Font License), plus Caveat Brush (OFL) as a marker accent only, all bundled. Animation: GSAP 3 (bundled).

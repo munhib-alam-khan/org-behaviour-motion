@@ -7,10 +7,11 @@ import { fitStage } from './engine/stage';
 import { Deck } from './engine/deck';
 import { installUI } from './engine/ui';
 import { SCENES } from './scenes';
+import { loadImages } from './assets';
 
 async function boot() {
   installTextures();
-  await loadFonts();
+  await Promise.all([loadFonts(), loadImages()]);
   const viewport = document.getElementById('viewport')!;
   const stage = document.getElementById('stage')!;
   const params = new URLSearchParams(location.search);
@@ -24,7 +25,7 @@ async function boot() {
     stage.remove();
     deck.scenes.forEach((s, i) => {
       const frame = document.createElement('div');
-      frame.className = 'frame';
+      frame.className = 'sheet-frame';
       frame.innerHTML = `<div class="frame-label">${String(i + 1).padStart(2, '0')} · ${s.def.title}</div>`;
       frame.appendChild(s.root);
       viewport.appendChild(frame);

@@ -41,6 +41,6 @@
 /* Static contact sheet (?static) — every scene at its submission state. */
 body.static { overflow: auto; background: #111; height: auto; }
 body.static #viewport { position: static; display: grid; grid-template-columns: repeat(3, 640px); gap: 24px; padding: 24px; background: #111; }
-body.static .frame { position: relative; width: 640px; height: 360px; overflow: hidden; }
-body.static .frame .scene { visibility: visible; transform: scale(0.33333); transform-origin: 0 0; width: 1920px; height: 1080px; }
+body.static .sheet-frame { position: relative; width: 640px; height: 360px; overflow: hidden; }
+body.static .sheet-frame .scene { visibility: visible; transform: scale(0.33333); transform-origin: 0 0; width: 1920px; height: 1080px; }
 body.static .frame-label { position: absolute; z-index: 99; left: 6px; top: 6px; font: 600 12px 'JetBrains Mono', monospace; color: #fff; background: rgba(0,0,0,.7); padding: 2px 6px; }
