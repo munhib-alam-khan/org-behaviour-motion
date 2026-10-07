@@ -433,6 +433,11 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 | A01 | `A01_P01_scanner-hands.webp` | **P01** scanner-hands close-up | 1672×941 | Approved |
 | A03 | `A03_P04_checkout-lanes.webp` | **P04** wide checkout lanes | 1672×941 | Approved |
 | A04 | `A04_P05_cashier-character.webp` | **P05** 🔒 **locked recurring cashier character** | 1536×1024 | Approved |
+| A02 | `A02_P02_receipt-printer.webp` | **P02** receipt-printer macro → Sc 1 (print, then tear) | 1536×1024 | Approved, **generated text must be covered** |
+| A05 | `A05_P06_checkout-queue.webp` | **P06** queue → Sc 16 (queue lengthens and shortens), Sc 1 small inset | 1536×1024 | Approved |
+| A06 | `A06_cashier-scanning.webp` | **A04 alternate shot** (same character at work) → Sc 2 (repeated frames under AGAIN), Sc 7 right frame (scanning = task identity) | 1536×1024 | Approved, continuity shot |
+| A07 | `A07_P07_overhead-bag-rail.webp` | **P07 (adapted)**: overhead bag rail, not a top-down belt → Sc 5, Sc 13 | 1536×1024 | Approved, adaptation noted |
+| A08 | `A08_P09_cash-drawer.webp` | **P09** cash drawer → Sc 7 left frame (significance: money handled), Sc 21 right pan | 1536×1024 | Approved, **screen amount must be covered** |
 
 **A04 lock:** A04 is the only cashier character. It is used for every P05 reference: Sc 3 (WE ASKED THE CASHIERS), Sc 8 (2.55 squeeze), Sc 9 (Meaningful. But narrow.), Sc 14 (redesign opening), Sc 15 anchor, Sc 17 small climber, Sc 21 left pan, Sc 23 finale. No other cashier will be generated or substituted.
 
@@ -440,3 +445,10 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 - Local cutout of A04 was tested with rembg/isnet, fully offline after the one-time model download. Clean result, including hair. The reaching hand dissolves into the scanner, and the body ends at the counter line.
 - A01 and A03 are below 1920 px wide, so full-bleed use needs a ~1.15× upscale. A04 needs ~1.25× when cropped to 16:9.
 - A03 has AI artefacts: lane signs "4" and "5" are duplicated in the background.
+
+**Handling rules (batch 2):**
+- **A02:** the AI-generated receipt lines, prices, "TOTAL 2,455.00" and the second smeared total are **never shown legibly**. The paper area is masked and re-set with our own typography (MONEY · DISCOUNTS · ACCURACY · WAITING TIME · = FINAL IMPRESSION). The generated "2,55.00"-like figure must not appear anywhere near the 2.55 finding.
+- **A08:** the POS screen ("Total 2,455.00 / Pay") is cropped out or blurred. Banknote serials and amounts are decorative only and no figure is ever referenced. The visible currency is generic illustrative Pakistani rupees.
+- **A06:** treated as A04 at work, not a new protagonist. Wherever character identity carries meaning (Sc 3, 8, 9, 14, 15, 17, 21, 23), A04 is used. A06 is used only where the action matters more than the face (repetition, scanning). Its face is kept smaller or partly cropped so minor differences from A04 don't read.
+- **A07 adaptation:** the shot is an overhead rail with numbered hanging bags (12/14/16). For Sc 5, the **five JCM objects hang from the rail hooks** and travel in on it, so the bag numbers are replaced with our 01–05 labels. Sc 13 uses the same rail ("objects suspended above the store") with scanner-light beams dropping to the three states. AI artefact: almost every lane sign reads "5", so those are retouched or kept out of crop.
+- **A05:** AI-generated, fictional faces, acceptable. The cashier at the right edge is cropped out so no second protagonist appears.
