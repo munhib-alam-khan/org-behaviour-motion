@@ -445,6 +445,11 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 | A13 | `A13_P08-TS_bag.webp` | **P08 · Task Significance** (customer's bag) → Sc 5, Sc 13 | 1672×941 | Approved, cutout tested clean |
 | A14 | `A14_P08-AU_keys.webp` | **P08 · Autonomy** (keys) → Sc 5, Sc 13 | 1672×941 | Approved, **house charm to be removed** |
 | A15 | `A15_P08-FB_scanner.webp` | **P08 · Feedback** (scanner) → Sc 5, Sc 13 | 1672×941 | Approved, cutout tested clean |
+| A16 | `A16_P03_flat-receipt.webp` | **P03** flat receipt → Sc 3 wall, Sc 7 transaction strip, Sc 23 closing receipt | 1672×941 | Approved |
+| A17 | `A17_P12_blank-tags.webp` | **P12** blank tags → Sc 10 values, Sc 12 fragment | 1672×941 | Approved, cutouts clean |
+| A18 | `A18_P21_card-terminal.webp` | **P21** terminal ✓ → Sc 18 operational feedback | 1672×941 | Approved |
+| A19 | `A19_P22_crates-box.webp` | **P22** crates + box → Sc 17 | 1672×941 | Approved, see note |
+| A20 | `A20_clipboard.webp` | *(bonus)* clipboard → Sc 20 proposed pilot "plan on paper" | 1672×941 | Proposed use, needs approval |
 
 **A04 lock:** A04 is the only cashier character. It is used for every P05 reference: Sc 3 (WE ASKED THE CASHIERS), Sc 8 (2.55 squeeze), Sc 9 (Meaningful. But narrow.), Sc 14 (redesign opening), Sc 15 anchor, Sc 17 small climber, Sc 21 left pan, Sc 23 finale. No other cashier will be generated or substituted.
 
@@ -468,3 +473,37 @@ Everywhere else it is replaced with a different medium, for variety in the spiri
 - All five were cut out locally (rembg/isnet, offline) with clean results. The wire basket's gaps come out transparent and the scanner cable trails off one edge.
 - **A14:** the house-shaped charm reads as "home ownership" rather than autonomy, so it is masked out of the cutout locally. The plain keys and car fob stay.
 - **A12:** a blank roll with no generated text, so it doubles as the paper source for our own typeset receipts. **P03 is downgraded from critical to optional.**
+
+**Handling rules (batch 5):**
+- **A17:** four tags cut out cleanly with strings intact. Sc 10 needs five (4.32, 4.16, 4.04, 2.84, 3.28), so one tag is reused flipped and re-toned, and the 2.84 tag is darkened.
+- **A19:** the crates overlap in the source, so the box and blue crate separate whole but the green crate is partly hidden. The staircase uses the box and blue crate repeated, re-toned, at varied angles. The enlargement pile uses A11 and A13.
+- **A20:** perspective-tilted, so any text on it is warped to its four paper corners (CSS matrix3d). No chart with exact values goes on a tilted surface; exact data stays flat.
+
+## 9. Consolidated scene → asset mapping (for approval)
+
+| Sc | Scene | Assets | Fallback / note |
+|---|---|---|---|
+| 0 | Title | A01 full-bleed (duotone), team on lower-third stickers | |
+| 1 | Last person you meet | A02 printer macro (generated text covered) → tear. A05 as small "waiting time" inset | |
+| 2 | Again. | A06 repeated in tilted frames → A03 lanes pattern-wipe → A16 receipt wall | |
+| 3 | The question | A16 wall collapse. A04 cutout in front of "THE CASHIERS." | |
+| 4 | 25 | 25 crops cut from A01–A10, A18 (varied moments) as taped collage, giant 25 | P16 street missing → A03 strip |
+| 5 | Five characteristics | A07 rail, with A11–A15 cutouts hanging on hooks (01–05 labels) | |
+| 6 | Diagnose first | A09 full-frame: the stamped slip reads our "REPETITIVE → ROTATION", then the ink imprint | |
+| 7 | 4.09 / 4.04 | A08 (money handled) + A06 (scanning) as tilted frames. A16 transaction strip | |
+| 8 | Drop to 2.55 | **A04** cutout squeezed by magenta walls. Full diagnosis = pure data on black | P11 barcode missing → crop from A01 or drawn barcode |
+| 9 | Meaningful. But narrow. | **A04** cutout (continuous), A03 blurred | |
+| 10 | What cashiers value | A17 tags ×5 (one reused), tape | |
+| 11 | r ≈ .54 | Procedural graph paper (no asset needed), exact scatter | |
+| 12 | Managerial signal | Fragments: A04 (2.55), A17 tag (4.32), scatter paper, red string | |
+| 13 | JCM | A07 rail with A11–A15 suspended, scanner-light beams to states | |
+| 14 | Enriched cashier | **A04** cutout, walls open onto A10 aisle / A03 (softened) | |
+| 15 | Micro-rotation | A10 (price check in aisle) + marker loops. **A04** anchor | |
+| 16 | Controlled authority | A05 queue, A10 supervisor cutout, A09 stamp (cropped for old flow, in hand for proposed) | |
+| 17 | Enlargement vs enrichment | A11/A13 flat pile vs A19 crate staircase, **A04** small climber | |
+| 18 | Structured feedback | A18 terminal ✓ (operational) vs A10 conversation (developmental) | |
+| 19 | A hypothesis. Test it. | none (drains from Sc 18 imagery to grey) | |
+| 20 | Proposed pilot | **A20 clipboard** with the timeline written on it *(proposed)* | alternative: yellow typographic timeline |
+| 21 | Both must survive | **A04** cutout vs A08 drawer on the balance | |
+| 22 | Routine ≠ meaningless | A01 full-bleed poster (bookend to the title) | |
+| 23 | Finale | **A04** in the narrow slot → A03 wide lit store. A16 prints "Thank you" | P17 empty lane missing → A03 graded dark |
