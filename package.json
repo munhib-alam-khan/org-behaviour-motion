@@ -1,0 +1,23 @@
+{
+  "name": "checkout-jcm-presentation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run verify && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "verify": "node --experimental-strip-types --no-warnings scripts/verify-data.ts",
+    "release": "npm run build && mkdir -p release && cp dist/index.html release/CHECKOUT-presentation.html"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

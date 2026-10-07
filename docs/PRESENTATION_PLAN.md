@@ -3,7 +3,7 @@
 KSBL · Organizational Behaviour · Fall 2026 · Instructor: Dr. Faryal Razzaq
 Team: Munhib Alam Khan · Abdullah Khan · Rabie Sami · Karan Kumar
 
-**Status: PLAN FOR APPROVAL. No implementation has started.**
+**Status: APPROVED and implemented.** See the decisions log at the end.
 
 ---
 
@@ -274,3 +274,20 @@ All original. No photos, no Imtiaz logo or branding.
 6. Is the speaker split A/B/C/D above correct, and who is which person? This sets the presenter overlay cues.
 7. Sound: should the beep be default **off** with an S toggle (proposed), or default on?
 8. Title wording: "Redesigning the Checkout Cashier Role" (the report title) or a shorter cinematic title such as "CHECKOUT"?
+
+---
+
+## 6. Decisions (team answers)
+
+1. Data entry: no timestamps are stored or shown anywhere; the scatter uses anonymous construct scores only.
+2. Method shown as "Interviewer-administered · Questions read aloud & explained · Voluntary · No names / IDs / phone numbers".
+3. Branches shown as "Multiple Imtiaz branches · Karachi".
+4. Rotation 3.28 shown as a small quiet tag in Sc 10.
+5. "Learn additional skills" (14 of 25) added to the Sc 12 card, labelled exploratory.
+6. No speaker labels; the presenter overlay shows the current and next cue.
+7. Sound: one synthesised beep, off by default, toggled with S.
+8. Title: "CHECKOUT" wordmark, with the report title underneath.
+
+Implementation notes vs. plan:
+- A press during an animation **completes** it (it does not also advance), so a double-press can never skip a reveal such as 2.55.
+- Sc 4 (Investigate) has 3 states. The question and "WE ASKED THE CASHIERS." live in Sc 3, and the receipt wall's collapse is Sc 3's intro.

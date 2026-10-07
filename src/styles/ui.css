@@ -1,0 +1,46 @@
+/* Presenter UI — never visible unless summoned. */
+#progress { position: fixed; left: 0; right: 0; bottom: 0; height: 3px; z-index: 20; pointer-events: none; opacity: 0.35; }
+#progress i { display: block; height: 100%; background: #f4ecdd; transform-origin: 0 50%; transform: scaleX(0); transition: transform 0.4s ease; mix-blend-mode: difference; }
+#blackout { position: fixed; inset: 0; background: #000; z-index: 30; opacity: 0; pointer-events: none; transition: opacity 0.35s; }
+#blackout.open { opacity: 1; pointer-events: auto; }
+#toast { position: fixed; left: 50%; bottom: 36px; transform: translateX(-50%); z-index: 60; padding: 10px 18px; border-radius: 8px;
+  background: rgba(11, 6, 16, 0.85); color: #f4ecdd; font: 600 16px/1.2 'JetBrains Mono', monospace; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+#toast.on { opacity: 1; }
+
+#corner { position: fixed; right: 0; bottom: 0; z-index: 50; padding: 28px 18px 14px 60px; display: flex; gap: 8px; opacity: 0; transition: opacity 0.25s; }
+#corner:hover { opacity: 1; }
+#corner button, .nav-card { font: 600 14px/1.2 'JetBrains Mono', monospace; color: #f4ecdd; background: rgba(11, 6, 16, 0.88);
+  border: 1px solid rgba(244, 236, 221, 0.25); border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+#corner button:hover { border-color: #ff2e88; }
+
+#presenter { position: fixed; left: 16px; top: 16px; z-index: 55; width: 520px; padding: 14px 16px; border-radius: 10px;
+  background: rgba(11, 6, 16, 0.9); color: #f4ecdd; font: 500 15px/1.45 'JetBrains Mono', monospace;
+  border: 1px solid rgba(244, 236, 221, 0.2); display: none; }
+#presenter.open { display: block; }
+#presenter b { color: #ffd23f; }
+#presenter .p-now { margin-top: 8px; color: #f4ecdd; }
+#presenter .p-next { margin-top: 4px; color: #ff7aa8; }
+#presenter .p-keys { margin-top: 10px; font-size: 12px; opacity: 0.6; }
+#presenter .dots i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; background: rgba(244, 236, 221, 0.25); }
+#presenter .dots i.on { background: #ff2e88; }
+
+#nav { position: fixed; inset: 0; z-index: 58; display: none; background: rgba(5, 3, 7, 0.92); padding: 40px 48px; overflow: auto; }
+#nav.open { display: block; }
+.nav-head { display: flex; justify-content: space-between; align-items: baseline; color: #f4ecdd; font: 700 22px 'JetBrains Mono', monospace; margin-bottom: 20px; }
+.nav-head .hint { font-size: 13px; font-weight: 500; opacity: 0.6; }
+.nav-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.nav-card { text-align: left; display: flex; flex-direction: column; gap: 4px; min-height: 120px; padding: 12px; border-left: 6px solid #555; }
+.nav-card b { font-size: 22px; } .nav-card em { font-style: normal; opacity: 0.55; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+.nav-card span { font-size: 15px; } .nav-card small { margin-top: auto; opacity: 0.5; font-size: 11px; }
+.nav-card.current { outline: 2px solid #ff2e88; }
+.nav-card:hover { background: #2b1140; }
+.theme-chip-night { border-left-color: #2b1140; } .theme-chip-black { border-left-color: #000; }
+.theme-chip-day { border-left-color: #f4ecdd; } .theme-chip-yellow { border-left-color: #ffd23f; }
+.theme-chip-magenta { border-left-color: #ff2e88; } .theme-chip-pause { border-left-color: #d9d6cf; }
+
+/* Static contact sheet (?static) — every scene at its submission state. */
+body.static { overflow: auto; background: #111; height: auto; }
+body.static #viewport { position: static; display: grid; grid-template-columns: repeat(3, 640px); gap: 24px; padding: 24px; background: #111; }
+body.static .frame { position: relative; width: 640px; height: 360px; overflow: hidden; }
+body.static .frame .scene { visibility: visible; transform: scale(0.33333); transform-origin: 0 0; width: 1920px; height: 1080px; }
+body.static .frame-label { position: absolute; z-index: 99; left: 6px; top: 6px; font: 600 12px 'JetBrains Mono', monospace; color: #fff; background: rgba(0,0,0,.7); padding: 2px 6px; }
