@@ -38,9 +38,9 @@ export const pilot = defineScene({
     const Q: [number, number][] = [[370, 243], [1022, 106], [1424, 804], [687, 1017]];
     const W = 640, H = 860;
     const row = (cls: string, wk: string, title: string, sub: string, color: string) => `
-      <div class="${cls}" style="display:flex;gap:18px;align-items:flex-start;margin-top:22px">
-        <div class="mono" style="width:120px;flex:none;font-size:30px;font-weight:700;color:${color}">${wk}</div>
-        <div><div class="dx" style="font-size:30px;line-height:1">${title}</div><div class="mono" style="font-size:22px;margin-top:6px;line-height:1.25">${sub}</div></div>
+      <div class="${cls}" style="display:flex;gap:14px;align-items:baseline;margin-top:20px">
+        <div class="mono s20-wk" style="position:relative;width:92px;flex:none;font-size:30px;font-weight:700;color:${color}">${wk}</div>
+        <div><div class="dx nowrap" style="font-size:26px;line-height:1">${title}</div><div class="mono" style="font-size:21px;margin-top:6px;line-height:1.25">${sub}</div></div>
       </div>`;
     root.innerHTML = `
       ${plate('a20')}
@@ -58,11 +58,16 @@ export const pilot = defineScene({
         ${row('s20-w1', 'W1–6', 'Intervention', 'The four proposed changes', '#C98A00')}
         ${row('s20-w3', 'W3', 'Midpoint check', 'Catch operational problems early', '#FF7A1A')}
         ${row('s20-w6', 'W6', 'Post-measurement', 'Same measures again', '#3D6BFF')}
+        <svg class="s20-ring" width="130" height="80" viewBox="0 0 130 80" style="position:absolute;overflow:visible;pointer-events:none"><path d="${markerCircle(65, 40, 60, 32, 12)}" fill="none" stroke="#FF2E88" stroke-width="5" stroke-linecap="round"/></svg>
       </div>
-      <svg class="mk-svg s20-ring" width="1920" height="1080"><path d="${markerCircle(985, 780, 210, 50, 12)}" stroke="#FF2E88" stroke-width="7" transform="rotate(31 985 780)"/></svg>
       ${stamp('Proposed · not yet conducted', 's20-st', 'left:1080px;top:100px;font-size:46px;transform:rotate(6deg);background:rgba(11,6,16,.35)')}
       ${mk('a plan,<br>not a result', 'left:1460px;top:300px;font-size:84px;color:var(--yellow);transform:rotate(-6deg);white-space:normal', 's20-mk')}
     `;
+    // Ring lives on the paper (same perspective) and circles the W3 label.
+    const wk3 = $('.s20-w3 .s20-wk'), paper = $('.s20-paper'), ringEl = $<SVGSVGElement>('.s20-ring');
+    void paper;
+    ringEl.style.left = `${wk3.offsetLeft - 46}px`;   // offsetParent is the paper itself
+    ringEl.style.top = `${wk3.offsetTop - 22}px`;
     const ring = $<SVGPathElement>('.s20-ring path');
     const L = ring.getTotalLength();
     gsap.set(ring, { attr: { 'stroke-dasharray': L, 'stroke-dashoffset': L } });
