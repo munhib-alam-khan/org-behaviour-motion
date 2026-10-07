@@ -10,7 +10,7 @@ An academic study. Not affiliated with or endorsed by Imtiaz. The redesign and p
 
 ## Presenting (offline, no internet needed)
 
-1. Open **`release/CHECKOUT-presentation.html`** in Chrome or Edge (double-click it). It is one self-contained file with fonts, code and graphics inside, so copy it to the laptop or a USB stick beforehand.
+1. Open **`release/CHECKOUT-presentation.html`** (identical to the root `index.html`) in Chrome or Edge by double-clicking it. It is one self-contained file with fonts, code and graphics inside, so copy it to the laptop or a USB stick beforehand.
 2. Press **F** for fullscreen.
 3. Press **P** once to check the presenter overlay, then **P** again to hide it.
 
@@ -62,11 +62,11 @@ npm install
 npm run dev       # live dev server
 npm run verify    # check locked numbers
 npm run build     # verify + typecheck + dist/index.html (single file)
-npm run release   # build + copy to release/CHECKOUT-presentation.html
+npm run release   # build + copy to index.html (GitHub Pages) and release/CHECKOUT-presentation.html
 ```
 
 - Open `dist/index.html?static` (or the release file with `?static`) to see a **contact sheet of every scene's submission state**. This is the canonical static frame per scene, intended for the later PPTX export.
 - Each scene is a paused GSAP timeline. Every `step()` call marks a click-state label, so forward plays to the next label and back/jump seeks. Scene modules live in `src/scenes/act*.ts`.
-- **GitHub Pages:** `.github/workflows/pages.yml` deploys on push to `main`. Enable it once under *Settings → Pages → Source: GitHub Actions*. Local offline use never depends on it.
+- **GitHub Pages** (*Settings → Pages → Deploy from a branch*, folder `/ (root)`) serves the root `index.html`, which is the **built** presentation. The dev source entry is `src/index.html`. **Always run `npm run release` and commit before pushing**, or Pages will show the old build. Local offline use never depends on Pages.
 
 Fonts: Archivo and JetBrains Mono (SIL Open Font License), bundled. Animation: GSAP 3 (bundled).

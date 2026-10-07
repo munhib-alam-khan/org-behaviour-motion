@@ -8,7 +8,7 @@
     "build": "npm run verify && tsc --noEmit && vite build",
     "preview": "vite preview",
     "verify": "node --experimental-strip-types --no-warnings scripts/verify-data.ts",
-    "release": "npm run build && mkdir -p release && cp dist/index.html release/CHECKOUT-presentation.html"
+    "release": "npm run build && cp dist/index.html index.html && mkdir -p release && cp dist/index.html release/CHECKOUT-presentation.html"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",
