@@ -1,6 +1,6 @@
 # Art-Direction Revision Plan: "CHECKOUT" v2
 
-**Status: PROPOSAL, awaiting approval. Nothing implemented.**
+**Status: APPROVED IN PRINCIPLE.** Next step: map the supplied asset pack to P01–P20 and get that mapping approved. No implementation before then. See §7 for amendments.
 Scope is visual only. Research, narrative, scene order, click-states, presenter controls, data and engine stay exactly as they are (24 scenes, 93 states). Every locked number keeps its current scene and click.
 
 ---
@@ -370,3 +370,56 @@ The mix line gives the approximate share of photo / graphic / type for that scen
 3. **Cutouts:** may I remove backgrounds locally (an offline tool, if it installs here)? Or would you rather supply PNG cutouts? Using Adobe's background-removal service would mean uploading your photos to Adobe, and I won't do that without your OK.
 4. **Short video loops (P20):** allowed? They add realism but about 1–3 MB each.
 5. **Handwritten/marker annotation font:** OK?
+
+---
+
+## 7. Amendments after approval (v2.1)
+
+### Decisions
+- **Assets** are AI-generated for this deck, illustrative only. No real employees or respondents, and no Imtiaz branding. Any branding-like artefact that slips into a generated image is retouched out or the image is rejected.
+- **Background removal is done locally only.** Nothing is uploaded to external services.
+- **Short video loops are approved** when they materially improve a shot. Rules:
+  - Bundled offline, muted, and played **only while their state is on screen**.
+  - They **never advance the deck** and never gate a click. Leaving the state pauses and rewinds the loop.
+  - A poster frame stands in for each loop, so `?static` and the PPTX export stay deterministic.
+- **The marker font is an accent only:** short annotations, ticks, circles, arrows. All primary text stays Archivo / JetBrains Mono.
+- **The engine is unchanged:** click-states, back/forward, navigator, presenter overlay and keys stay exactly as built.
+
+### Receipt rebalanced: a thread, not the solution
+The receipt now appears in **6 scenes**:
+- Sc 1: printer → tear (hero)
+- Sc 2: repetition
+- Sc 3: wall collapse
+- Sc 7: the transaction steps
+- Sc 12: as one torn fragment among others
+- Sc 23: the closing bookend
+
+Everywhere else it is replaced with a different medium, for variety in the spirit of the reference films:
+
+| Scene | Was (receipt-led) | Now |
+|---|---|---|
+| Sc 0 Title | team list on a receipt | **Full-bleed cinematic photo** (P01) with Ref-A **lower-third label stickers** for the team names |
+| Sc 4 · 25 | 25 receipt stubs | **Contact-sheet collage of 25 small photographic crops** (hands, belts, tills, queues, drawers, all different moments), loosely taped. Giant "25" cuts through them |
+| Sc 8 full diagnosis | chart on receipt stock | **Pure-data minimal scene**: the barcode bars become the five rows on near-black, with nothing else on screen |
+| Sc 13 JCM | receipt strips merging | **Surreal composition**: the five object cutouts float above the real belt, and **scanner-light beams** run from them and converge into the three psychological states |
+| Sc 17 enlargement/enrichment | receipt staircase | **Photographic object cutouts**: grocery crates piling flat (enlargement) versus crates **stacked into a rising staircase** the small cashier cutout climbs (enrichment) |
+| Sc 18 feedback | receipt "BALANCED ✓" | **Macro shot of a card terminal / POS screen showing "APPROVED"** (operational) versus the **conversation photo** (developmental) |
+| Sc 20 pilot | receipt timeline roll | **Bold minimal typographic timeline** on yellow, with tape strips for weeks and a marker circle at W3 |
+| Sc 22 poster | receipt tick strip | Marker ticks and empty tag outlines drawn **directly on the full-bleed photo** |
+
+### Scene types across the deck (target variety)
+| Type | Scenes |
+|---|---|
+| **Full-screen cinematic photography** | Sc 0, Sc 1, Sc 22, finale opening (Sc 23) |
+| **Photographic cutouts / surreal** | Sc 3, Sc 8 (squeeze), Sc 9, Sc 13, Sc 14, Sc 17, Sc 21 |
+| **Macro object shots** | Sc 5 (belt), Sc 6 (stamp), Sc 16 (stamp), Sc 18 (terminal) |
+| **Editorial collage / spreads** | Sc 4, Sc 10, Sc 12, Sc 15 |
+| **Bold typography posters** | Sc 2, Sc 13 closing line, Sc 18 sentence, Sc 23 final lines |
+| **Pure data / minimal** | Sc 8 full diagnosis, Sc 11 (graph paper), Sc 19 (grey stop), Sc 20 |
+
+### Additional optional shots
+| ID | Shot | Use |
+|---|---|---|
+| P21 | Macro of a **card terminal / POS screen** with a generic "APPROVED" state, no brand | Sc 18 |
+| P22 | **Plastic grocery crates / cardboard boxes**, several angles (CUT) | Sc 17 |
+| P23 | **Varied small moments** for the Sc 4 contact sheet: hands, coins, bags, belt, drawer, queue, scanner, shelves (8–15 images; can reuse others) | Sc 4 |
