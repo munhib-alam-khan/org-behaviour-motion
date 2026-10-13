@@ -152,6 +152,7 @@ export const authority = defineScene({
           ${REDESIGN.supervisorRetains.map((r, i) => `<div class="s16-chip mono paper" style="position:relative;padding:8px 16px;font-size:25px;font-weight:700;transform:rotate(${((i * 3) % 3) - 1}deg);box-shadow:5px 6px 0 rgba(0,0,0,.5);border-left:10px solid var(--violet)">${r}</div>`).join('')}
         </div>
         ${tornPic('a10_super', { x: 1560, y: 520, w: 300, h: 400, seed: 31, rot: 2, cls: 's16-h s16-sup', pos: '50% 20%' })}
+        <div class="abs lbl s16-arr" style="left:${ox(0) + 150}px;top:248px;font-size:26px;color:var(--magenta)">A routine customer problem</div>
         <div class="abs s16-tok" style="left:${ox(0) + 90}px;top:258px;width:40px;height:40px;border-radius:50%;background:var(--magenta);border:4px solid var(--ink);color:var(--ink);font:900 26px/32px var(--display);text-align:center">!</div>
       </div>
       <div class="foot">Proposed design principle — exact permissions &amp; any thresholds would be defined by management.</div>
@@ -180,10 +181,13 @@ export const authority = defineScene({
     gsap.set(tok, { scale: 0 });
     gsap.set($('.s16-sent'), { opacity: 0, y: 40 });
 
-    tl.to(tok, { scale: 1, duration: 0.5, ease: 'back.out(3)' });
+    gsap.set($('.s16-arr'), { opacity: 0, x: -20 });
+    tl.to(tok, { scale: 1, duration: 0.5, ease: 'back.out(3)' })
+      .to($('.s16-arr'), { opacity: 1, x: 0, duration: 0.4 }, '<0.1');
     step('A routine customer problem arrives (the queue is real)');
 
-    tl.to([$('.s16-lo'), $('.s16-q')], { opacity: 1, duration: 0.3 });
+    tl.to($('.s16-arr'), { opacity: 0, duration: 0.2 })
+      .to([$('.s16-lo'), $('.s16-q')], { opacity: 1, duration: 0.3 }, '<');
     $$('.s16-o').forEach((n, i) => {
       tl.to(n, { opacity: 1, duration: 0.2 }, i ? '>-0.05' : '>');
       if (i) tl.to($$('.s16-oa')[i - 1], { opacity: 1, duration: 0.15 }, '<');

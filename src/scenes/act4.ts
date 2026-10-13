@@ -32,10 +32,10 @@ export const value = defineScene({
         <div class="dc" style="font-size:72px">What would cashiers value?</div>
         <div class="mono" style="font-size:26px;margin-top:10px">Mean agreement · 1–5 · n = ${SAMPLE.n}</div>
       </div>
-      <div class="abs s10-x" style="left:1180px;top:925px;transform:rotate(-3deg)">${tapeStrip(0, 0, 340, 0)}<span class="mk" style="left:26px;top:-2px;font-size:46px;color:var(--ink)">unlimited freedom</span><i class="s10-strike"></i></div>
-      <div class="abs s10-x" style="left:1540px;top:990px;transform:rotate(2deg)">${tapeStrip(0, 0, 330, 0)}<span class="mk" style="left:24px;top:-2px;font-size:46px;color:var(--ink)">random movement</span><i class="s10-strike"></i></div>
+      <div class="abs s10-x" style="left:1180px;top:925px;transform:rotate(-3deg)">${tapeStrip(0, 0, 340, 0)}<span class="mk" style="left:18px;top:-8px;font-size:52px;color:var(--ink);z-index:31">unlimited freedom</span><i class="s10-strike"></i></div>
+      <div class="abs s10-x" style="left:1540px;top:990px;transform:rotate(2deg)">${tapeStrip(0, 0, 330, 0)}<span class="mk" style="left:18px;top:-8px;font-size:52px;color:var(--ink);z-index:31">random movement</span><i class="s10-strike"></i></div>
     `;
-    $$<HTMLElement>('.s10-x .s10-strike').forEach((e) => Object.assign(e.style, { left: '-10px', width: '360px', right: 'auto', top: '24px' }));
+    $$<HTMLElement>('.s10-x .s10-strike').forEach((e) => Object.assign(e.style, { left: '-10px', width: '360px', right: 'auto', top: '20px', zIndex: '32', height: '7px' }));
     const tags = $$('.s10-t');
     gsap.set($$('.s10-x'), { opacity: 0, y: 20 });
     gsap.set($$('.s10-strike'), { scaleX: 0 });
@@ -88,7 +88,7 @@ export const association = defineScene({
     const fitD = markerLine(px(x0), py(a + b * x0), px(x1), py(a + b * x1), 5, 3);
 
     root.innerHTML = `
-      ${actTag('IV', 'Go deeper')}
+      ${actTag('IV', 'Go deeper').replace('class="act-tag"', 'class="act-tag" style="left:1230px"')}
       <div class="graph s11-paper" style="left:110px;top:70px;width:1060px;height:950px;transform:rotate(-1.5deg)">
         <svg class="abs" width="1060" height="950" style="left:0;top:0">
           <g class="s11-axes" stroke="#0B0610" stroke-width="5">
@@ -102,7 +102,7 @@ export const association = defineScene({
           <div class="abs mono" style="left:${L - 54}px;top:${py(v) - 18}px;font-size:28px;color:var(--ink)">${v}</div>`).join('')}
         <div class="abs lbl" style="left:${L}px;top:${B + 60}px;font-size:26px;color:var(--ink)">${CORRELATION.x} <span style="opacity:.6">(score 1–5)</span></div>
         <div class="abs lbl" style="left:${L - 60}px;top:${T - 74}px;font-size:26px;color:var(--ink)">${CORRELATION.y} <span style="opacity:.6">(score 1–5)</span></div>
-        <div class="abs mono" style="left:${L}px;top:${B + 104}px;font-size:22px;color:var(--ink);opacity:.75">Each sticker = one cashier · dashed ring = two cashiers, identical scores</div>
+        <div class="abs mono" style="left:${L}px;top:${B + 104}px;font-size:22px;color:var(--ink);opacity:.75">Each sticker = one cashier · ring = two identical scores</div>
         </div>
       </div>
       ${tapeStrip(70, 60, 190, -30)}${tapeStrip(1040, 70, 190, 28)}${tapeStrip(90, 960, 170, 24)}
@@ -170,7 +170,7 @@ export const signal = defineScene({
         `<div class="lbl" style="font-size:22px">Lowest JCM score</div><div style="display:flex;align-items:baseline;gap:16px"><span class="d" style="font-size:110px">${JCM.SV.label}</span><span class="dx" style="font-size:28px">${JCM.SV.name}</span></div>`)}
       ${polaroid('s12-b', 705, 225, 2, `<div class="full" style="background:#cdbfa8"></div>${pic('tag4', 'left:40px;top:-150px;width:180px;transform:rotate(-4deg)')}
           ${mk(`most-selected:<br>learn new skills<br>&amp; ownership<br>(${MULTI_RESPONSE.learnSkills.count} of ${MULTI_RESPONSE.of} each)*`, 'left:230px;top:50px;font-size:38px;color:var(--ink);white-space:normal;transform:rotate(-4deg);line-height:1.05')}`,
-        `<div class="lbl" style="font-size:22px">What cashiers value</div><div style="display:flex;align-items:baseline;gap:10px"><span class="d" style="font-size:70px">${PREFERENCES.authority.label}</span><span class="dx" style="font-size:18px">authority</span><span class="d" style="font-size:56px">${PREFERENCES.ownership.label}</span><span class="dx" style="font-size:18px">ownership</span></div><div class="mono" style="font-size:18px;opacity:.7">*${MULTI_RESPONSE.caveat.toLowerCase()}</div>`)}
+        `<div class="lbl" style="font-size:22px">What cashiers value</div><div style="display:flex;align-items:baseline;gap:8px"><span class="d" style="font-size:66px">${PREFERENCES.authority.label}</span><span class="dx" style="font-size:20px;margin-right:18px">authority</span><span class="d" style="font-size:66px">${PREFERENCES.ownership.label}</span></div><div class="dx" style="font-size:20px;margin:-4px 0 4px 288px">ownership</div><div class="mono" style="font-size:19px;opacity:.75">*${MULTI_RESPONSE.caveat.toLowerCase()}</div>`)}
       ${polaroid('s12-c3', 1295, 245, 4, `<div class="graph full" style="box-shadow:none"></div>${miniScatter(456, 360)}`,
         `<div class="lbl" style="font-size:22px">Strongest observed association</div><div style="display:flex;align-items:baseline;gap:14px"><span class="d nowrap" style="font-size:100px"><span style="text-transform:none">r</span> ${sym('approx')} .54</span><span class="dx" style="font-size:22px">variety ${sym('both')} satisfaction</span></div>`)}
       <div class="abs s12-ticket" style="left:360px;top:600px;width:1200px;height:330px;background:var(--yellow);color:var(--ink);padding:44px 60px;

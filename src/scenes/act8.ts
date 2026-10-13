@@ -68,7 +68,7 @@ export const finale = defineScene({
       <div class="full s23-cream" style="background:var(--cream)">
         <div class="abs s23-rc" style="left:760px;top:0;width:400px;height:620px;background:url(${img('receipt_strip')}) center/100% 100%;filter:drop-shadow(0 20px 30px rgba(0,0,0,.25))">
           <div class="mono" style="position:absolute;left:46px;right:46px;top:300px;color:var(--ink);text-align:center">
-            <div style="font-weight:700;font-size:56px">Thank you.</div>
+            <div style="font-weight:700;font-size:44px;white-space:nowrap">Thank you.</div>
             <div style="border-top:3px dashed var(--ink);margin:18px 0 12px"></div>
             ${STUDY.team.map((n) => `<div style="font-size:21px;line-height:1.5;font-weight:600">${n}</div>`).join('')}
           </div>
